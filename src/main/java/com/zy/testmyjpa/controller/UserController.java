@@ -29,6 +29,7 @@ public class UserController {
     public ResultBean findByUsername(@PathVariable("username") String username){
         List<User> user = userDao.findByUsername(username);
         System.out.println(user);
+        System.out.println(123);
         return new ResultBean(user.get(0));
     }
     @RequestMapping(value="findkey/{keyword}")
