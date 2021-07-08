@@ -28,7 +28,7 @@ public class UserController {
     @ResponseBody
     public ResultBean findByUsername(@PathVariable("username") String username){
         List<User> user = userDao.findByUsername(username);
-       // System.out.println(user);
+        System.out.println(user);
         return new ResultBean(user.get(0));
     }
     @RequestMapping(value="findkey/{keyword}")
